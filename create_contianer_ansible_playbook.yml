@@ -1,0 +1,11 @@
+---
+- hosts: localhost
+  tasks:
+  - name: Create container with k8s file logging
+    containers.podman.podman_container:
+      name: echoevery5con
+      image: docker.io/khalu/echoevery5
+      log_driver: "k8s-file"
+      log_level: debug
+      log_opt:
+        { path: '/var/log/podman/echoevery5' }

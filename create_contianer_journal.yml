@@ -1,0 +1,11 @@
+---
+- hosts: localhost
+  tasks:
+  - name: Create container with journal logging
+    containers.podman.podman_container:
+      name: journal.container
+      image: docker.io/library/mysql
+      log_driver: "journald"
+      log_level: debug
+      log_opt:
+        { path: '/var/log/podman/journal.container' }
