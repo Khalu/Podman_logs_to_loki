@@ -2,7 +2,7 @@
 
 This is a quick readme for how to send Podman container logs to Grafan's Loki via Grafana's Promtail, for my full blog post [see here.](https://n00bsecurityblog.wordpress.com/2023/07/28/getting-podman-container-logs-to-grafana-loki/)
 
-Grafana Promtail offers a convient way to send all Docker container logs to Grafana Loki. While Podman often maintains feature parity with Docker, in this case the Docker log driver solution requires a daemon, which Podman does not use. There are other options for sending Podman container logs to Loki however. Podman has 2 options for capturing container logs. 
+Grafana Promtail offers a convient way to send all Docker container logs to Grafana Loki. While Podman often maintains feature parity with Docker, in this case the Docker log driver solution requires a daemon, which Podman does not use. There are other options for sending Podman container logs to Loki, however. Podman has 2 options for capturing container logs. 
 
 ## Journald
 
